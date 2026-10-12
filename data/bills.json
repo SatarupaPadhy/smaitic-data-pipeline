@@ -1,0 +1,87 @@
+{
+  "_id": {
+    "$oid": "6ac35aa24eaa1b3731c0aaaa"
+  },
+  "tlm": {
+    "$date": "2026-10-05T08:07:10.19Z"
+  },
+  "_meta": {
+    "at": {
+      "$date": "2026-10-05T08:07:10.048Z"
+    },
+    "by": null,
+    "src": "profile-service",
+    "traceId": "00551f1ce45347b590f0cac46fa91270"
+  },
+  "taxes": 0,
+  "total": 50.16,
+  "po_num": "UN638655",
+  "status": "DISPUTED",
+  "bill_to": "Street 1, Street 2, City, State 27560 US",
+  "inv_num": "1630576185",
+  "ship_to": "Street 1, Street 2, City, State 10001 US",
+  "due_date": {
+    "$date": "2026-10-10T10:00:00Z"
+  },
+  "group_id": "6194b27eb75021281bfd6542",
+  "inbox_id": "49058bf0e4a0434c8041dc526e0edee3",
+  "inv_date": {
+    "$date": "2026-09-10T10:00:00Z"
+  },
+  "inv_type": "INVOICE",
+  "shipping": 7.5,
+  "supplier": "UC100111",
+  "file_name": "<redacted>.pdf",
+  "sub_total": 38.66,
+  "created_at": {
+    "$date": "2026-10-05T08:06:58.398Z"
+  },
+  "inv_source": "emailed<arstatements@example.com>",
+  "line_items": [
+    {
+      "qty": 2,
+      "name": "PANT SCRUB CARGO-65/3",
+      "price": 18.7,
+      "unit_price": 9.35,
+      "supplier_product_id": "7265 12 M"
+    },
+    {
+      "qty": 2,
+      "name": "SS SCRUB-65/35 BRUSHED POPLIN",
+      "price": 19.96,
+      "unit_price": 9.98,
+      "supplier_product_id": "7262 12 XL"
+    }
+  ],
+  "updated_at": {
+    "$date": "2026-10-05T08:07:10.052Z"
+  },
+  "paid_amount": 0,
+  "customer_num": "1687966",
+  "approval_info": [
+    {
+      "email": "admin@example.com",
+      "user_id": "6253cad2965af3357f1a308d",
+      "user_name": "Example Care AP"
+    }
+  ],
+  "document_type": "INVOICE",
+  "location_name": "",
+  "discount_amount": 0,
+  "invoice_category": "SUPPLIES",
+  "original_filename": "<redacted>.pdf",
+  "invoice_extra_info": {
+    "page_to": 1,
+    "page_from": 1,
+    "account_id": "UN638655",
+    "is_due_date_defaulted": true
+  },
+  "supplier_extra_info": {
+    "name": "UniFirst Corporation",
+    "address": "PO BOX 650481, DALLAS, TX 75265-0481",
+    "website": "",
+    "remit_to": "PO BOX 650481, DALLAS, TX 75265-0481"
+  },
+  "invoice_workflow_active": true,
+  "approval_condition_is_and": false
+}

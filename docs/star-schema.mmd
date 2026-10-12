@@ -1,0 +1,75 @@
+
+erDiagram
+    FACT_ORDERS {
+        string order_id PK
+        string user_id
+        string group_id
+        string status
+        decimal total_amt
+        decimal savings_total
+        datetime created_at
+        date date_key FK
+    }
+
+    FACT_ORDER_ITEMS {
+        string order_id PK, FK
+        int item_position PK
+        string product_key FK
+        string supplier_key FK
+        int qty
+        decimal price
+        decimal unit_price
+    }
+
+    FACT_BILLS {
+        string bill_id PK
+        string status
+        string supplier
+        decimal total
+        decimal sub_total
+        decimal taxes
+        decimal shipping
+        decimal paid_amount
+        date invoice_date_key FK
+        date due_date
+    }
+
+    FACT_BILL_ITEMS {
+        string bill_id PK, FK
+        int item_position PK
+        string product_name
+        string supplier_product_id
+        int qty
+        decimal price
+        decimal unit_price
+    }
+
+    DIM_DATE {
+        date date_key PK
+        int day
+        int month
+        string month_name
+        int quarter
+        int year
+    }
+
+    DIM_PRODUCT {
+        string product_key PK
+        string product_id
+        string supplier_product_id
+        string product_name
+    }
+
+    DIM_SUPPLIER {
+        string supplier_key PK
+        string supplier_code
+    }
+
+    FACT_ORDERS ||--o{ FACT_ORDER_ITEMS : contains
+    FACT_BILLS ||--o{ FACT_BILL_ITEMS : contains
+
+    FACT_ORDERS }o--|| DIM_DATE : created_on
+    FACT_BILLS }o--|| DIM_DATE : invoiced_on
+
+    FACT_ORDER_ITEMS }o--|| DIM_PRODUCT : describes_product
+    FACT_ORDER_ITEMS }o--|| DIM_SUPPLIER : supplied_by

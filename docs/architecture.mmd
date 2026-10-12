@@ -1,0 +1,48 @@
+flowchart LR
+    subgraph SRC["Source: MongoDB"]
+        O["Orders collection"]
+        B["Bills collection"]
+        U["Users collection"]
+    end
+
+    subgraph EXT["Extract"]
+        E["Read documents<br/>JSON export"]
+    end
+
+    subgraph STG["Staging: PostgreSQL"]
+        S["Raw copy of each document<br/>kept for traceability"]
+    end
+
+    subgraph TRF["Transform"]
+        T1["Flatten nested arrays<br/>products, line_items, user arrays"]
+        T2["Generate item_position<br/>from array index"]
+        T3["Derive date keys<br/>epoch ms and ISO strings to dates"]
+        T4["Exclude password<br/>flag bill total discrepancy"]
+    end
+
+    subgraph REL["Load: normalized relational model"]
+        R1["orders, order_items"]
+        R2["bills, bill_items"]
+        R3["users and child tables"]
+    end
+
+    subgraph DWH["Analytical models"]
+        ST["Star schema"]
+        SF["Snowflake schema"]
+    end
+
+    O --> E
+    B --> E
+    U --> E
+    E --> S
+    S --> T1
+    T1 --> T2
+    T2 --> T3
+    T3 --> T4
+    T4 --> R1
+    T4 --> R2
+    T4 --> R3
+    R1 --> ST
+    R2 --> ST
+    R1 --> SF
+    R2 --> SF

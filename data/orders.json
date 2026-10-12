@@ -1,0 +1,989 @@
+{
+  "_id": {
+    "$oid": "6ab4a759e95fbb46aa4aaaaa"
+  },
+  "_meta": {
+    "at": {
+      "$date": 1790224217163
+    },
+    "by": "abc@example.com",
+    "src": "profile-service",
+    "traceId": "7bdc2e258d634d99975f530d1149394d"
+  },
+  "status": "ERRORED",
+  "user_id": "681a112ed174d2a6a511492e",
+  "group_id": "6515487fc16d7eb033e882f2",
+  "order_by": "68381ee5ef05dc84d19f1726",
+  "products": [
+    {
+      "qty": 3,
+      "name": "Liquid Ultra Solution",
+      "price": 184.74000000000000909,
+      "supplier": "PATTERSON",
+      "image_url": "https://assets.henryschein.com/1248732_US_Front_01_-Liquid-Ultra-Solution.jpg",
+      "product_id": "64b0ef42af4d829d4917dcba",
+      "unit_price": 61.579999999999998295,
+      "lowest_price": {
+        "qty": 1,
+        "PATTERSON:6610059": 61.579999999999998295
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "62401"
+      },
+      "supplier_product_id": "6610059"
+    },
+    {
+      "qty": 1,
+      "name": "ActCel Hemostatic Cellulose Gauze",
+      "price": 125.98999999999999488,
+      "supplier": "HS",
+      "image_url": "https://assets.henryschein.com/3576175_US_Group_01_-ActCel-Hemostatic-Dressing.jpg",
+      "product_id": "64b0f15caf4d829d491f8283",
+      "unit_price": 125.98999999999999488,
+      "lowest_price": {
+        "qty": "20",
+        "HS:3576175": 125.98999999999999488
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "52015"
+      },
+      "supplier_product_id": "3576175"
+    },
+    {
+      "qty": 2,
+      "name": "Polysyn Suture 3-0 27\" Polyglycolic Acid Braid C-6 Undyed 12/Bx",
+      "price": 112.15999999999999659,
+      "supplier": "HS",
+      "image_url": "https://assets.henryschein.com/5619145_US_Group_01_-Suture-Polysyn-Pga-Undyed-C-6.jpg",
+      "product_id": "681af05df430e19e0914cb97",
+      "unit_price": 56.079999999999998295,
+      "lowest_price": {
+        "qty": "12",
+        "HS:5619145": 56.079999999999998295
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "52015"
+      },
+      "supplier_product_id": "5619145"
+    },
+    {
+      "qty": 1,
+      "name": "BD Luer-Lok General Use Syringe 50cc Clear No Dead Space 40/Bx",
+      "price": 35.899999999999998579,
+      "supplier": "HS",
+      "image_url": "https://assets.henryschein.com/9873800_us_front_01_-Syringe-wo-Needle-LL.jpg",
+      "product_id": "6a4b3dfcbf01b41df63bb498",
+      "unit_price": 35.899999999999998579,
+      "lowest_price": {
+        "qty": "40",
+        "HS:9873800": 35.899999999999998579
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "52015"
+      },
+      "supplier_product_id": "9873800"
+    },
+    {
+      "qty": 1,
+      "name": "Transpore Surgical Tape Plastic/Polyethylene 1\"x10yd Clear Non-Sterile 12/Bx",
+      "price": 8.5899999999999998579,
+      "supplier": "MKSN",
+      "image_url": "https://assets.henryschein.com/7777305_US_Group_01_-Tape-Transpore-Plast-Transprnt.jpg",
+      "product_id": "66ed07dc4ca94900461c4513",
+      "unit_price": 8.5899999999999998579,
+      "lowest_price": {
+        "qty": "12",
+        "MKSN:5762-UOM-BX": 8.5899999999999998579
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "52015"
+      },
+      "supplier_product_id": "5762-UOM-BX"
+    },
+    {
+      "qty": 3,
+      "name": "Patterson MicroBVac Evacuation System Cleaner 32 oz Bottle",
+      "price": 127.46999999999999886,
+      "supplier": "PATTERSON",
+      "image_url": "https://content.pattersondental.com/LargeSquare/images/EPS_779003.jpg",
+      "product_id": "64b0f0c9af4d829d491d2612",
+      "unit_price": 42.49000000000000199,
+      "lowest_price": {
+        "qty": "1",
+        "PATTERSON:0357079": 42.49000000000000199
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "52015"
+      },
+      "supplier_product_id": "0357079"
+    },
+    {
+      "qty": 1,
+      "name": "Patterson Surgical Aspirator Tips 25/Pkg Regular 1/8\" Tip White",
+      "price": 2.0899999999999998579,
+      "supplier": "PATTERSON",
+      "image_url": "https://content.pattersondental.com/LargeSquare/images/113354.jpg",
+      "product_id": "64b0f0c9af4d829d491d26c1",
+      "unit_price": 2.0899999999999998579,
+      "lowest_price": {
+        "qty": "25",
+        "PATTERSON:0894303": 2.0899999999999998579
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "52015"
+      },
+      "supplier_product_id": "0894303"
+    },
+    {
+      "qty": 2,
+      "name": "Patterson Surgical Aspirator Tips 25/Pkg Large 1/4\" Tip Green",
+      "price": 4.1799999999999997158,
+      "supplier": "PATTERSON",
+      "image_url": "https://content.pattersondental.com/LargeSquare/images/113356.jpg",
+      "product_id": "64b0f0c9af4d829d491d26b9",
+      "unit_price": 2.0899999999999998579,
+      "lowest_price": {
+        "qty": "25",
+        "PATTERSON:0894329": 2.0899999999999998579
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "52015"
+      },
+      "supplier_product_id": "0894329"
+    },
+    {
+      "qty": 1,
+      "name": "Patterson Surgical Blades – Sterile Stainless Steel 100/Box 15",
+      "price": 14.199999999999999289,
+      "supplier": "PATTERSON",
+      "image_url": "https://content.pattersondental.com/LargeSquare/images/25673.jpg",
+      "product_id": "64b0f0c7af4d829d491d1f54",
+      "unit_price": 14.199999999999999289,
+      "is_backorder": true,
+      "lowest_price": {
+        "qty": "15",
+        "PATTERSON:0895128": 14.199999999999999289
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "52015"
+      },
+      "supplier_product_id": "0895128"
+    },
+    {
+      "qty": 2,
+      "name": "Patterson Chromic Gut Dental Surgical Absorbable Sutures – 3/8 Circle Reverse Cutting 12/Pkg Size 3-0 DS18 Length 27\"",
+      "price": 41.460000000000000853,
+      "supplier": "PATTERSON",
+      "image_url": "https://content.pattersondental.com/LargeSquare/images/EPS_741330.jpg",
+      "product_id": "64b0f0ceaf4d829d491d3773",
+      "unit_price": 20.730000000000000426,
+      "lowest_price": {
+        "qty": "12",
+        "PATTERSON:0899500": 20.730000000000000426
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "52015"
+      },
+      "supplier_product_id": "0899500"
+    },
+    {
+      "qty": 2,
+      "name": "Patterson Denture Brush – Assorted 12/Pkg",
+      "price": 11.779999999999999361,
+      "supplier": "PATTERSON",
+      "image_url": "https://content.pattersondental.com/LargeSquare/images/132780.jpg",
+      "product_id": "64b0f0ceaf4d829d491d37ad",
+      "unit_price": 5.8899999999999996803,
+      "lowest_price": {
+        "qty": "12",
+        "PATTERSON:0937706": 5.8899999999999996803
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "52015"
+      },
+      "supplier_product_id": "0937706"
+    },
+    {
+      "qty": 1,
+      "name": "CEREC Primescan Intraoral Scanner Disposable Barrier Sleeves 50/Pkg",
+      "price": 110,
+      "supplier": "PATTERSON",
+      "image_url": "https://assets.henryschein.com/8118197_US_front_01_-Primescan-Disposable-Sleeve.jpg",
+      "product_id": "64b0f0d2af4d829d491d4528",
+      "unit_price": 110,
+      "lowest_price": {
+        "qty": "50",
+        "PATTERSON:1202159": 110
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "52005"
+      },
+      "supplier_product_id": "1202159"
+    },
+    {
+      "qty": 2,
+      "name": "Patterson Instrument Tray Cover Sleeves 500/Pkg Fits Ritter B trays",
+      "price": 24.219999999999998863,
+      "supplier": "PATTERSON",
+      "image_url": "https://content.pattersondental.com/LargeSquare/images/JPG_1082909.jpg",
+      "product_id": "64b0f2e0af4d829d4925cf2a",
+      "unit_price": 12.109999999999999432,
+      "lowest_price": {
+        "qty": "500",
+        "PATTERSON:1423771": 12.109999999999999432
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "52015"
+      },
+      "supplier_product_id": "1423771"
+    },
+    {
+      "qty": 1,
+      "name": "Premium Nonwoven Sponges Nonsterile 4\" x 4\" 2000/Pkg",
+      "price": 70.879999999999995453,
+      "supplier": "PATTERSON",
+      "image_url": "https://assets.henryschein.com/1073837_US_front_01_-Sponge-Premium-NW-4Ply-NS.jpg",
+      "product_id": "64b0f395af4d829d4928f72e",
+      "unit_price": 70.879999999999995453,
+      "lowest_price": {
+        "qty": "2000",
+        "PATTERSON:2355667": 70.879999999999995453
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "52015"
+      },
+      "supplier_product_id": "2355667"
+    },
+    {
+      "qty": 6,
+      "name": "CaviWipes Disinfecting Towelettes Large 6” x 6.75” (160/tub)",
+      "price": 28.019999999999999574,
+      "supplier": "PATTERSON",
+      "image_url": "https://assets.henryschein.com/6402805_US_Front_01_-CaviWipes-Towelettes-Disin.jpg",
+      "product_id": "69d49645da2cb81852f1c086",
+      "unit_price": 4.6699999999999999289,
+      "lowest_price": {
+        "qty": "160",
+        "PATTERSON:3070638": 4.6699999999999999289
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "52015"
+      },
+      "supplier_product_id": "3070638"
+    },
+    {
+      "qty": 10,
+      "name": "0.9% Sodium Chloride Injection USP - 500 ml 1 Port 1/Pkg NDC 00409-7983-03",
+      "price": 41.799999999999997158,
+      "supplier": "PATTERSON",
+      "image_url": "https://content.pattersondental.com/LargeSquare/images/295020.jpg",
+      "product_id": "6a0aa3a22d10ea33fbb1983d",
+      "unit_price": 4.1799999999999997158,
+      "lowest_price": {
+        "qty": "16.91",
+        "PATTERSON:3662442": 4.1799999999999997158
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "52015"
+      },
+      "supplier_product_id": "3662442"
+    },
+    {
+      "qty": 1,
+      "name": "LifeShield Primary Piggyback IV Set with 2 Y-Sites 15 Drips Per Minute",
+      "price": 5.7999999999999998224,
+      "supplier": "PATTERSON",
+      "image_url": "https://content.pattersondental.com/LargeSquare/images/341561.jpg",
+      "product_id": "64b0f0caaf4d829d491d2949",
+      "unit_price": 5.7999999999999998224,
+      "lowest_price": {
+        "qty": "1",
+        "PATTERSON:3662624": 5.7999999999999998224
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "52015"
+      },
+      "supplier_product_id": "3662624"
+    },
+    {
+      "qty": 5,
+      "name": "Explorers – # 5 (# 23/17) Double End",
+      "price": 32.5,
+      "supplier": "PATTERSON",
+      "image_url": "https://assets.henryschein.com/5020057_US_front_01_-Explorer-DE-5-(2317).jpg",
+      "product_id": "64b0ef4faf4d829d4917fe09",
+      "unit_price": 6.5,
+      "lowest_price": {
+        "qty": "1",
+        "PATTERSON:3937794": 6.5
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "52050"
+      },
+      "supplier_product_id": "3937794"
+    },
+    {
+      "qty": 2,
+      "name": "Midwest Operative Carbide Burs FG Straight Crosscut Flat End # 557 1.0 mm Diameter 3.7 mm Length 10/Pkg",
+      "price": 17.100000000000001421,
+      "supplier": "PATTERSON",
+      "image_url": "https://assets.henryschein.com/7723926_US_front_01_-Midwest-Carbide-Bur.jpg",
+      "product_id": "64b0ef20af4d829d49178505",
+      "unit_price": 8.5500000000000007105,
+      "lowest_price": {
+        "qty": "10",
+        "PATTERSON:4929725": 8.5500000000000007105
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "52015"
+      },
+      "supplier_product_id": "4929725"
+    },
+    {
+      "qty": 3,
+      "name": "Peridex Chlorhexidine Gluconate 0.12% Oral Rinse 64 oz Bottle",
+      "price": 108.87000000000000455,
+      "supplier": "PATTERSON",
+      "image_url": "https://assets.henryschein.com/7370004_US_Front_01_-Peridex.jpg",
+      "product_id": "64b0ef4caf4d829d4917f4f5",
+      "unit_price": 36.289999999999999147,
+      "lowest_price": {
+        "qty": "64",
+        "PATTERSON:5046222": 36.289999999999999147
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "52035"
+      },
+      "supplier_product_id": "5046222"
+    },
+    {
+      "qty": 1,
+      "name": "Triple Tray Impression Trays Posterior 48/Box",
+      "price": 25.050000000000000711,
+      "supplier": "PATTERSON",
+      "image_url": "https://assets.henryschein.com/3784241_US_front_01_-Triple-Tray-Posterior.jpg",
+      "product_id": "64b0ef3caf4d829d4917ce8b",
+      "unit_price": 25.050000000000000711,
+      "lowest_price": {
+        "qty": "48",
+        "PATTERSON:5858451": 25.050000000000000711
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "52015"
+      },
+      "supplier_product_id": "5858451"
+    },
+    {
+      "qty": 2,
+      "name": "Ésa Disposable Prophy Angles - Midwest Shorty and Rhino Handpieces Soft Cup Nonlatex 100/Pkg",
+      "price": 108.79999999999999716,
+      "supplier": "PATTERSON",
+      "image_url": "https://content.pattersondental.com/LargeSquare/images/127865.jpg",
+      "product_id": "64b0f020af4d829d491a8f48",
+      "unit_price": 54.399999999999998579,
+      "lowest_price": {
+        "qty": "100",
+        "PATTERSON:5866165": 54.399999999999998579
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "52015"
+      },
+      "supplier_product_id": "5866165"
+    },
+    {
+      "qty": 10,
+      "name": "Lavender Nitrile Exam Gloves – Powder Free Latex Free Small 250/Box",
+      "price": 121.5,
+      "supplier": "PATTERSON",
+      "image_url": "https://assets.henryschein.com/1391961_US_front_01_-UoM-Nitrile-Glove-Lav-PF-Sm.jpg",
+      "product_id": "681aefc2f430e19e0913cf2a",
+      "unit_price": 12.150000000000000355,
+      "lowest_price": {
+        "qty": "250",
+        "PATTERSON:6201289": 12.150000000000000355
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "52015"
+      },
+      "supplier_product_id": "6201289"
+    },
+    {
+      "qty": 15,
+      "name": "Lavender Nitrile Exam Gloves – Powder Free Latex Free Medium 250/Box",
+      "price": 182.25,
+      "supplier": "PATTERSON",
+      "image_url": "https://assets.henryschein.com/1391962_US_front_01_-UoM-Nitrile-Glove-Lav-PF-Md.jpg",
+      "product_id": "64b0f32faf4d829d49273a08",
+      "unit_price": 12.150000000000000355,
+      "lowest_price": {
+        "qty": "250",
+        "PATTERSON:6201297": 12.150000000000000355
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "52015"
+      },
+      "supplier_product_id": "6201297"
+    },
+    {
+      "qty": 1,
+      "name": "Monoject Needle Tips 18 Gauge 1 in Blunt #202 25/Box",
+      "price": 21.359999999999999432,
+      "supplier": "PATTERSON",
+      "image_url": "https://assets.henryschein.com/1949535_US_front_01_-Needle-Blunt-Cannula-LL.jpg",
+      "product_id": "659cf3317338626fd3ac6f43",
+      "unit_price": 21.359999999999999432,
+      "lowest_price": {
+        "qty": "25",
+        "PATTERSON:6336192": 21.359999999999999432
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "52015"
+      },
+      "supplier_product_id": "6336192"
+    },
+    {
+      "qty": 1,
+      "name": "0.9% Sodium Chloride Irrigation USP Plastic Pour Bottle - 500 ml 18/Case",
+      "price": 91.049999999999997158,
+      "supplier": "PATTERSON",
+      "image_url": "https://assets.henryschein.com/1531042_US_Front_01_-Sodium-Chlo-.9%-Irr-Bottle.jpg",
+      "product_id": "64b0ef43af4d829d4917e07d",
+      "unit_price": 91.049999999999997158,
+      "lowest_price": {
+        "qty": "304.33",
+        "PATTERSON:6746895": 91.049999999999997158
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "52015"
+      },
+      "supplier_product_id": "6746895"
+    },
+    {
+      "qty": 1,
+      "name": "Waste Stick-On Bags – Red Biohazard 100/Pkg 12\" x 14\" 2.6 Quart",
+      "price": 30.929999999999999716,
+      "supplier": "PATTERSON",
+      "image_url": "https://content.pattersondental.com/LargeSquare/images/JPG_926545.jpg",
+      "product_id": "64b0f0c7af4d829d491d1f3a",
+      "unit_price": 30.929999999999999716,
+      "lowest_price": {
+        "qty": "100",
+        "PATTERSON:7004526": 30.929999999999999716
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "52015"
+      },
+      "supplier_product_id": "7004526"
+    },
+    {
+      "qty": 2,
+      "name": "Oral Surgery Carbide Burs – HP Shank #2 10/Pkg Tapered Fissure Cross Cut Size # 703 2.1 mm Head Diameter",
+      "price": 86.920000000000001705,
+      "supplier": "PATTERSON",
+      "image_url": "https://content.pattersondental.com/LargeSquare/images/120062.jpg",
+      "product_id": "66e7c507af33fcc17363f2f1",
+      "unit_price": 43.460000000000000853,
+      "lowest_price": {
+        "qty": "10",
+        "PATTERSON:7368665": 43.460000000000000853
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "52015"
+      },
+      "supplier_product_id": "7368665"
+    },
+    {
+      "qty": 1,
+      "name": "Staples Sticky Notes 3 X 3 100 Sheets/Pad 12 Pads/Pack (S33Yr12/52564)",
+      "price": 2.2999999999999998224,
+      "supplier": "STAPLES",
+      "image_url": "https://ac-order.staplesadvantage.com/is/image/Staples/s1073456_sc7?wid=700&hei=700",
+      "product_id": "64b0f31aaf4d829d4926d945",
+      "unit_price": 2.2999999999999998224,
+      "lowest_price": {
+        "qty": "1200",
+        "STAPLES:105809": 2.2999999999999998224
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "62401"
+      },
+      "supplier_product_id": "105809"
+    },
+    {
+      "qty": 2,
+      "name": "Perk Disinfecting Wipes Lemon 75 Wipes (PK56665)",
+      "price": 6.5400000000000000355,
+      "supplier": "STAPLES",
+      "image_url": "https://ac-order.staplesadvantage.com/is/image/Staples/s1221525_sc7?wid=700&hei=700",
+      "product_id": "64b0f18caf4d829d492047f9",
+      "unit_price": 3.2700000000000000178,
+      "lowest_price": {
+        "qty": "75",
+        "STAPLES:24411134": 3.2700000000000000178
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "62401"
+      },
+      "supplier_product_id": "24411134"
+    },
+    {
+      "qty": 1,
+      "name": "Ziploc Sandwich Bags 500 Bags/Carton (682255)",
+      "price": 21.920000000000001705,
+      "supplier": "STAPLES",
+      "image_url": "https://ac-order.staplesadvantage.com/is/image/Staples/sp86910678_sc7?wid=700&hei=700",
+      "product_id": "65a767f84d6b4efb9edff034",
+      "unit_price": 21.920000000000001705,
+      "lowest_price": {
+        "qty": "500",
+        "STAPLES:458108": 21.920000000000001705
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "62401"
+      },
+      "supplier_product_id": "458108"
+    },
+    {
+      "qty": 1,
+      "name": "Coffee mate Original Liquid Creamer 0.38 Oz. 50/Box (35110)",
+      "price": 5.4900000000000002132,
+      "supplier": "STAPLES",
+      "image_url": "https://ac-order.staplesadvantage.com/is/image/Staples/sp118163659_sc7?wid=700&hei=700",
+      "product_id": "64b0f105af4d829d491e17d0",
+      "unit_price": 5.4900000000000002132,
+      "lowest_price": {
+        "qty": "50",
+        "STAPLES:470743": 5.4900000000000002132
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "62401"
+      },
+      "supplier_product_id": "470743"
+    },
+    {
+      "qty": 1,
+      "name": "Green Mountain Regular Variety Pack Coffee Keurig K-Cup Pods Variety Pack Roast 22/Box (6501)",
+      "price": 15.259999999999999787,
+      "supplier": "STAPLES",
+      "image_url": "https://ac-order.staplesadvantage.com/is/image/Staples/s1020464_sc7?wid=700&hei=700",
+      "product_id": "64b0ef35af4d829d4917bcc1",
+      "unit_price": 15.259999999999999787,
+      "lowest_price": {
+        "qty": "22",
+        "STAPLES:719465": 15.259999999999999787
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "62401"
+      },
+      "supplier_product_id": "719465"
+    },
+    {
+      "qty": 1,
+      "name": "Stericycle Wall Bracket and Key",
+      "price": 5.7999999999999998224,
+      "supplier": "STERICYCLE",
+      "image_url": "https://store.stericycle.com/assets/1/15/DimRegular/435440.jpg",
+      "product_id": "65e01cc0eda2d81e18493891",
+      "unit_price": 5.7999999999999998224,
+      "lowest_price": {
+        "qty": "1",
+        "STERICYCLE:435440": 5.7999999999999998224
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "52015"
+      },
+      "supplier_product_id": "435440"
+    },
+    {
+      "qty": 1,
+      "name": "FG330 Pear Plain Cut 25PK Carbide Bur",
+      "price": 21.25,
+      "supplier": "STRSDIMD",
+      "image_url": "https://b1445105.smushcdn.com/1445105/wp-content/uploads/2016/09/FG330-zoom-1536x1536.jpg?lossy=1&strip=1&webp=1",
+      "product_id": "64b0ef97af4d829d4918c0da",
+      "unit_price": 21.25,
+      "lowest_price": {
+        "qty": "25",
+        "STRSDIMD:FG330": 21.25
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "52015"
+      },
+      "supplier_product_id": "FG330"
+    },
+    {
+      "qty": 4,
+      "name": "Gemini EVO / Gemini 7 mm Uninitiated Tip",
+      "price": 617.39999999999997726,
+      "supplier": "ULTRADENT",
+      "image_url": "https://images.ctfassets.net/wfptrcrbtkd0/2ccd29b5af00636058883ab2bc294754/685092e82acd1d7dab405701b6f19deb/8984_Gemini-7mm-Tip-single_EQUIPMENT-highdef.jpg?w=900&q=70&fm=webp",
+      "product_id": "64b0f002af4d829d491a1e2d",
+      "unit_price": 154.34999999999999432,
+      "lowest_price": {
+        "qty": "25",
+        "ULTRADENT:8984-": 154.34999999999999432
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "52035"
+      },
+      "supplier_product_id": "8984-"
+    },
+    {
+      "qty": 1,
+      "name": "CO2 Sample Line",
+      "price": 69,
+      "supplier": "ONEREP",
+      "image_url": "https://i.ibb.co/7C26gDN/APSO2094.jpg",
+      "product_id": "65f00d10d56fb90ddc5b0232",
+      "unit_price": 69,
+      "lowest_price": {
+        "qty": 1,
+        "ONEREP:APSO2094": 69
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "52015"
+      },
+      "supplier_product_id": "APSO2094"
+    },
+    {
+      "qty": 1,
+      "name": "Irrigation Tubing Set for Implant Drill 10/Pkg",
+      "price": 87.579999999999998295,
+      "supplier": "PATTERSON",
+      "image_url": "https://assets.henryschein.com/2720181_US_front_01_-Irrigation-Tubing-Set-fImplnt.jpg",
+      "product_id": "661e0e599fd10ef3f04746ef",
+      "unit_price": 87.579999999999998295,
+      "lowest_price": {
+        "qty": 10,
+        "PATTERSON:0107532": 87.579999999999998295
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "52015"
+      },
+      "supplier_product_id": "0107532"
+    },
+    {
+      "qty": 6,
+      "name": "alloOss Bn Grft Cortical/Cancellous Particulate Allograft 250-1000ÔøΩ 0.5 cc Ea",
+      "price": 228,
+      "supplier": "HS",
+      "image_url": "https://assets.henryschein.com/1117148_US_front_01_S_-Allooss-CorticoCancel-.5cc.jpg",
+      "product_id": "66cebb31b02863100cd653f0",
+      "unit_price": 38,
+      "lowest_price": {
+        "qty": 1,
+        "HS:1117148": 38
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "52040"
+      },
+      "supplier_product_id": "1117148"
+    },
+    {
+      "qty": 5,
+      "name": "Bone Graft Cortical/Cancellous Particulate Allograft 250-1000 Microns 1.0 cc Ea",
+      "price": 245,
+      "supplier": "HS",
+      "image_url": "https://assets.henryschein.com/1117149_US_front_01_S_-Allooss-CorticoCancel-1cc.jpg",
+      "product_id": "64b0f18daf4d829d49204eca",
+      "unit_price": 49,
+      "lowest_price": {
+        "qty": 1,
+        "HS:1117149": 49
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "52040"
+      },
+      "supplier_product_id": "1117149"
+    },
+    {
+      "qty": 5,
+      "name": "creos xenoprotect collagen membrane 15 x 20 mm",
+      "price": 355.20000000000004547,
+      "supplier": "NOBEL",
+      "image_url": "https://store.nobelbiocare.com/media/catalog/product//n/1/n1520_1_1.png",
+      "product_id": "64b0ef4faf4d829d4917fc33",
+      "unit_price": 71.040000000000006253,
+      "lowest_price": {
+        "qty": 1,
+        "NOBEL:N1520": 71.040000000000006253
+      },
+      "account_code_values": {
+        "department": "1001",
+        "location_id": "100733",
+        "expense_code": "52040"
+      },
+      "supplier_product_id": "N1520"
+    }
+  ],
+  "meta_data": {
+    "HS": {
+      "tax": 10.390000000000000568,
+      "total": 757.44000000000005457,
+      "po_num": "HS381901",
+      "discount": null,
+      "sub_total": 747.04999999999995453,
+      "shipping_cost": 0,
+      "shipping_method": "Standard Delivery"
+    },
+    "MKSN": {
+      "tax": 0.68999999999999994671,
+      "total": 9.2799999999999993605,
+      "po_num": "MKN381899",
+      "discount": null,
+      "sub_total": 8.5899999999999998579,
+      "shipping_cost": 0,
+      "shipping_method": "Standard Delivery"
+    },
+    "NOBEL": {
+      "tax": 28.420000000000001705,
+      "total": 383.62000000000000455,
+      "po_num": "NBL381898",
+      "discount": null,
+      "sub_total": 355.19999999999998863,
+      "shipping_cost": 0,
+      "shipping_method": "Second Day Delivery"
+    },
+    "ONEREP": {
+      "tax": 5.5199999999999995737,
+      "total": 74.519999999999996021,
+      "po_num": "ON381904",
+      "discount": null,
+      "sub_total": 69,
+      "order_email": "orders@example.com",
+      "shipping_cost": 0,
+      "shipping_method": "Standard Delivery",
+      "email_delivery_event": {
+        "ip": "127.0.0.1",
+        "tls": 1,
+        "count": 1,
+        "email": "orders@example.com",
+        "event": "delivered",
+        "smtp-id": "<redacted>",
+        "response": "<redacted>",
+        "processed": {
+          "$date": 1790224219000
+        },
+        "timestamp": 1790224219,
+        "event_name": "delivered",
+        "sg_event_id": "ZGVsaXZlcmVkLTAtNjE3MzI2MjctZm1RQ0dva2NTSk9HNDJrNWtub0NGQS0w",
+        "sg_message_id": "fmQCGokcSJOG42k5knoCFA.recvd-fd4d48d6c-mr4md-1-6AB4A75A-15F.0"
+      },
+      "email_delivery_status": "delivered"
+    },
+    "STAPLES": {
+      "tax": 4.1200000000000001066,
+      "total": 55.630000000000002558,
+      "po_num": "ST381900",
+      "discount": null,
+      "sub_total": 51.50999999999999801,
+      "shipping_cost": 0,
+      "shipping_method": "Standard Delivery"
+    },
+    "STRSDIMD": {
+      "tax": 1.6999999999999999556,
+      "total": 31.949999999999999289,
+      "po_num": "ST381905",
+      "discount": null,
+      "sub_total": 21.25,
+      "shipping_cost": 9,
+      "shipping_method": "Standard Delivery"
+    },
+    "PATTERSON": {
+      "tax": 126.43999999999999773,
+      "total": 1706.9900000000000091,
+      "po_num": "PTU381902",
+      "discount": null,
+      "sub_total": 1580.5499999999999545,
+      "shipping_cost": 0,
+      "shipping_method": "Standard Delivery"
+    },
+    "ULTRADENT": {
+      "tax": 0,
+      "total": 617.39999999999997726,
+      "po_num": "ULT381897",
+      "discount": null,
+      "sub_total": 617.39999999999997726,
+      "shipping_cost": 0,
+      "shipping_method": "Standard Delivery"
+    },
+    "STERICYCLE": {
+      "tax": 0.46000000000000001998,
+      "total": 6.2599999999999997868,
+      "po_num": "ST381903",
+      "discount": null,
+      "sub_total": 5.7999999999999998224,
+      "order_email": "customer-relations@example.com",
+      "shipping_cost": 0,
+      "shipping_method": "Standard Delivery",
+      "email_delivery_event": {
+        "ip": "149.72.197.100",
+        "tls": 1,
+        "count": 1,
+        "email": "customer-relations@example.com",
+        "event": "delivered",
+        "smtp-id": "<redacted>",
+        "response": "<redacted>",
+        "processed": {
+          "$date": 1790224220000
+        },
+        "timestamp": 1790224220,
+        "event_name": "delivered",
+        "sg_event_id": "ZGVsaXZlcmVkLTAtNjE3MzI2MjctVkhfd1pzSThUUVNVaHd4RkNEbG5IZy0w",
+        "sg_message_id": "VH_wZsI8TQSUhwxFCDlnHg.recvd-fd4d48d6c-mr4md-1-6AB4A75A-133.0"
+      },
+      "email_delivery_status": "delivered"
+    }
+  },
+  "queued_at": {
+    "$date": 1790224217675
+  },
+  "suppliers": [
+    "ULTRADENT",
+    "NOBEL",
+    "MKSN",
+    "STAPLES",
+    "HS",
+    "PATTERSON",
+    "STERICYCLE",
+    "ONEREP",
+    "STRSDIMD"
+  ],
+  "total_amt": 3643.0900000000001455,
+  "web_count": 3,
+  "created_at": {
+    "$date": 1790224217361
+  },
+  "email_count": 2,
+  "error_count": 1,
+  "direct_count": 4,
+  "processed_at": {
+    "$date": 1790224236382
+  },
+  "savings_total": 15.400000000000000355,
+  "success_count": 8,
+  "error_suppliers": [
+    "MKSN"
+  ],
+  "payment_methods": {
+    "HS": "Bill On Account",
+    "MKSN": "Bill On Account",
+    "NOBEL": "Bill On Account",
+    "ONEREP": "Bill On Account",
+    "STAPLES": "Bill On Account",
+    "STRSDIMD": "Bill On Account",
+    "PATTERSON": "Bill On Account",
+    "ULTRADENT": "Bill On Account",
+    "STERICYCLE": "Bill On Account"
+  },
+  "suppliers_count": 9,
+  "shipping_address": [
+    "123  Main Street",
+    "New York, NY 10001-4607 US"
+  ],
+  "success_suppliers": [
+    "STERICYCLE",
+    "ONEREP",
+    "STAPLES",
+    "NOBEL",
+    "HS",
+    "STRSDIMD",
+    "ULTRADENT",
+    "PATTERSON"
+  ],
+  "supplier_order_ids": {
+    "HS": "WEB03070921",
+    "MKSN": "",
+    "NOBEL": "0042364398",
+    "ONEREP": "ON381904",
+    "STAPLES": "ST381900",
+    "STRSDIMD": "ST381905",
+    "PATTERSON": "Your order has been submitted and an email will be sent to you with your Order Number.",
+    "ULTRADENT": "13180852",
+    "STERICYCLE": "ST381903"
+  },
+  "processing_duration": 18.707000000000000739,
+  "started_processing_at": {
+    "$date": 1790224218163
+  }
+}

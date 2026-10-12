@@ -1,0 +1,231 @@
+{
+  "_id": {
+    "$oid": "5b2aca05ab63b017ac505944"
+  },
+  "seq": 1,
+  "cart": {
+    "items": {
+      "DARBY:5251516": 2,
+      "DARBY:9541206": 1,
+      "BENCO:5701-091": 1,
+      "DENTALCITY:76-201": 1,
+      "DENTALCITY:52-9169": 6
+    },
+    "noteId": "7b078e15-6d59-4638-9bdf-08d8d29a2dff",
+    "additional_info": {
+      "DARBY:5251516": {
+        "price": {
+          "DC": 54.350000000000001421,
+          "max": 64.090000000000003411,
+          "BENCO": "62.29",
+          "DARBY": "54.22",
+          "DENTALCITY": 64.090000000000003411
+        },
+        "incr_qty": 1,
+        "lowest_price": {}
+      },
+      "DARBY:9515480": {
+        "price": {
+          "DARBY": "70.3"
+        }
+      },
+      "DARBY:9541206": {
+        "price": {
+          "DC": 11.150000000000000355,
+          "max": 13.990000000000000213,
+          "TDSC": 13.990000000000000213,
+          "BENCO": 13.789999999999999147,
+          "DARBY": "11.99"
+        },
+        "lowest_price": {
+          "DARBY:9541206": 11.990000000000000213
+        }
+      },
+      "BENCO:5680-739": {
+        "price": {
+          "BENCO": "50.99"
+        }
+      },
+      "BENCO:5701-091": {
+        "price": {
+          "DC": 54.350000000000001421,
+          "max": 64.090000000000003411,
+          "BENCO": "62.29",
+          "DARBY": "54.22",
+          "DENTALCITY": 64.090000000000003411
+        }
+      },
+      "DENTALCITY:76-201": {
+        "price": {
+          "DC": 35.850000000000001421,
+          "max": 143.84999999999999432,
+          "TDSC": 26.829999999999998295,
+          "BENCO": 44.49000000000000199,
+          "DARBY": 32.149999999999998579,
+          "DENTALCITY": "21.58"
+        },
+        "lowest_price": {
+          "DENTALCITY:76-201": 21.579999999999998295
+        }
+      },
+      "DENTALCITY:52-9169": {
+        "price": {
+          "DC": 113.34999999999999432,
+          "max": 148.99000000000000909,
+          "TDSC": 113.34999999999999432,
+          "BENCO": 148.99000000000000909,
+          "DARBY": 120.65000000000000568,
+          "DENTALCITY": "97.57"
+        }
+      }
+    }
+  },
+  "city": "Hyderabad",
+  "_meta": {
+    "at": {
+      "$date": 1791179901233
+    },
+    "by": null,
+    "src": "profile-service",
+    "traceId": "012b5db54a7d4a2eb0b31ec4e21f06e6"
+  },
+  "email": "user@example.com",
+  "flink": {
+    "$date": 1782061505431
+  },
+  "fname": "First",
+  "lname": "Last",
+  "state": "Alabama",
+  "roleId": [
+    "6475e79851ca3f12eab35fa7",
+    "6475ffb4f5e1e27d82ac78e6",
+    "6476009247da2ecf99d83d64",
+    "6502ec56549bb7f1bdd5d216"
+  ],
+  "street": "test address",
+  "group_id": "5dcbec2da9581376311d2e42",
+  "password": "<redacted>",
+  "phone_no": [
+    "1234567892"
+  ],
+  "priceMap": {
+    "DC": {},
+    "HS": {},
+    "TDSC": {},
+    "BENCO": {
+      "5701-091": {
+        "1": 62.289999999999999147,
+        "fetched_at": 1691126750431,
+        "available_on_call": false,
+        "availability_status": "IN_STOCK"
+      }
+    },
+    "DARBY": {
+      "5251516": {
+        "1": 54.219999999999998863,
+        "fetched_at": 1691126750431,
+        "available_on_call": false,
+        "availability_status": "IN_STOCK"
+      },
+      "9541206": {
+        "1": 11.990000000000000213,
+        "fetched_at": 1701681327025,
+        "available_on_call": false,
+        "availability_status": "IN_STOCK"
+      }
+    },
+    "SAFCO": {},
+    "PEARSON": {},
+    "WBMASON": {},
+    "AODIRECT": {},
+    "DENTSPLY": {},
+    "BRASSELER": {},
+    "PATTERSON": {},
+    "DENTALCITY": {
+      "76-201": {
+        "1": 21.579999999999998295,
+        "fetched_at": 1740588835021,
+        "available_on_call": false,
+        "availability_status": "IN_STOCK"
+      },
+      "52-9169": {
+        "1": 97.569999999999993179,
+        "fetched_at": 1691075957268,
+        "available_on_call": false,
+        "availability_status": "IN_STOCK"
+      }
+    },
+    "BIOHORIZONS": {}
+  },
+  "username": "user@example.com",
+  "zip_code": "500089",
+  "addToList": false,
+  "isVisited": 2,
+  "phone_nos": [
+    "1234567890"
+  ],
+  "user_type": [
+    "clinic",
+    "test",
+    "grp_admin"
+  ],
+  "created_at": {
+    "$date": 1529530885773
+  },
+  "clinic_name": "Example Clinic Name",
+  "shortRefUrl": "ref.example.com/w38",
+  "subgroup_id": "67d27fa5f886bf08c967c00c",
+  "departmentId": [
+    "6475ffce341717efd7392c64",
+    "6475fff9f5e1e27d82ac7919",
+    "6476000a341717efd7392c8b",
+    "64760015f5e1e27d82ac7940",
+    "6502ec65ace5d96cd3a6db4b"
+  ],
+  "subgroup_ids": [
+    "67d27fa5f886bf08c967c00c"
+  ],
+  "has_formulary": true,
+  "last_login_at": {
+    "$date": 1791179901348
+  },
+  "referral_type": "online ad",
+  "edit_formulary": true,
+  "email_verified": true,
+  "invite_accepted": true,
+  "price_synced_at": {
+    "$date": 1561966214215
+  },
+  "is_group_enabled": true,
+  "is_stats_synched": true,
+  "isSourcingEnabled": true,
+  "master_updated_at": {
+    "$date": 1789112833203
+  },
+  "pass_reset_req_at": 1779859011033.0,
+  "supplier_linked_at": {
+    "$date": 1791179907242
+  },
+  "cart_updated_millis": 1759760185238,
+  "inv_first_viewed_at": {
+    "$date": 1568885727005
+  },
+  "verification_status": "VERIFIED",
+  "is_item_stats_synced": false,
+  "order_email_disabled": true,
+  "supplier_login_count": 0,
+  "is_item_stats_synched": true,
+  "useOrderStatsPipeline": false,
+  "offer_popup_seen_count": 1,
+  "approval_email_disabled": true,
+  "is_supplier_stats_synced": false,
+  "purchase_list_updated_at": {
+    "$date": 1789112833203
+  },
+  "is_supplier_stats_synched": true,
+  "order_frequency_data_synced": false,
+  "is_category_order_stats_synced": false,
+  "is_supplier_order_stats_synced": false,
+  "is_expense_code_order_stats_synced": false,
+  "is_supp_product_order_stats_synced": false
+}
