@@ -1,4 +1,4 @@
-Deployed my 2+ years of hands-on ETL/ELT experience across Snowflake, Informatica IICS, Azure Data Factory, and Databricks/PySpark to build reliable, well-modeled data pipelines as a Data Engineer. I bring a solid foundation in dimensional modeling, SQL, and Python, and I want to grow by designing scalable pipelines that turn raw operational data into trusted, analytics-ready datasets.
+Deploy my 2+ years of hands-on ETL/ELT experience across Snowflake, Informatica IICS, Azure Data Factory, and Databricks/PySpark to build reliable, well-modeled data pipelines as a Data Engineer. I bring a solid foundation in dimensional modeling, SQL, and Python, and I want to grow by designing scalable pipelines that turn raw operational data into trusted, analytics-ready datasets.
 
 # MongoDB to PostgreSQL Data Pipeline Design
 
