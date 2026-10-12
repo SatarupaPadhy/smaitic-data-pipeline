@@ -27,8 +27,8 @@ Each supplied JSON file contains a single inspected document. Counts such as 41 
 - **Candidate measures:** `qty`, `price`, `unit_price`.
 - **Candidate identifiers:** `product_id`, `supplier_product_id`, and supplier code.
 - **[Confirmed]** The inspected order items contain no dedicated item-level ID.
-- **[Design]** Generate `item_position` during ETL from the item's index in the source array. Combine it with the parent order ID to identify each row.
-- **[Assumption]** Item positions are reproducible only while the source-array ordering remains stable.
+- **[Design]** Generate `item_position` during ETL from the item's index in the source array, and combine it with the parent ID to identify each row. The same approach applies to bill items (section 4).
+- **[Assumption]** Item positions are reproducible only while the source-array ordering stays stable.
 - **[Design]** In the Star schema, `FACT_ORDER_ITEMS` stores `product_key` and `supplier_key`. In the Snowflake schema it stores `supplier_product_key`, which points to `BRIDGE_PRODUCT_SUPPLIER`.
 - **[Confirmed]** In the inspected order, `qty × unit_price` equals `price` for all 41 items.
 
@@ -48,10 +48,9 @@ Each supplied JSON file contains a single inspected document. Counts such as 41 
 - **Grain:** One row per line item within a bill.
 - **Parent identifier:** Source bill ID from the parent bill document.
 - **Candidate measures:** `qty`, `price`, `unit_price`.
-- **[Confirmed]** The inspected bill line items contain no dedicated item-level ID, and no `product_id` or supplier field. They carry only `name`, `supplier_product_id`, `qty`, `price` and `unit_price`.
-- **[Design]** Generate `item_position` during ETL from the item's index in the source array. Combine it with the parent bill ID to identify each row.
-- **[Assumption]** Item positions are reproducible only while the source-array ordering remains stable.
-- **[Design]** Do not link bill items to the product or supplier dimensions. They have no `product_id`, and the bill's supplier code was not observed among the order supplier codes (see 6.2). Keep `product_name` and `supplier_product_id` as plain attributes until a mapping is validated.
+- **[Confirmed]** The inspected bill line items contain no item-level ID, no `product_id` and no supplier field. They carry only `name`, `supplier_product_id`, `qty`, `price` and `unit_price`.
+- **[Design]** Identify rows with ETL-generated `item_position` plus the parent bill ID (see section 2).
+- **[Design]** Do not link bill items to the product or supplier dimensions. They have no `product_id`, and the bill's supplier code was not observed among the order supplier codes (see 6.2). Keep `name` and `supplier_product_id` as plain attributes until a mapping is validated.
 
 
 ## 5. Initial Data Quality Observation
@@ -72,8 +71,7 @@ Each supplied JSON file contains a single inspected document. Counts such as 41 
 - **[Confirmed]** In the inspected files, order timestamps are stored as epoch milliseconds, while bill dates are stored as ISO 8601 strings.
 - **[Design]** `FACT_ORDERS.date_key` is derived from `created_at`. `FACT_BILLS.invoice_date_key` is derived from `inv_date`. `due_date` remains a plain attribute on `FACT_BILLS`.
 - **[Assumption]** Dates are derived in UTC. The ETL must apply one consistent time zone when converting timestamps to dates.
-- **[Design]** The Star schema uses a flat `DIM_DATE` with day, month, month name, quarter, and year attributes.
-- **[Design]** The Snowflake schema separates the hierarchy into date, month, quarter, and year tables.
+- **[Design]** The Star schema uses a flat `DIM_DATE` with day, month, month name, quarter and year attributes. The Snowflake schema separates the hierarchy into date, month, quarter and year tables.
 - **[Design]** Month and quarter keys include the year so they stay unique across years. For example, October 2026 uses `month_key = 202610`, and Q4 2026 uses `quarter_key = 20264`.
 
 
@@ -109,13 +107,13 @@ This section describes the relational migration layer. It is separate from the S
 
 - **[Design]** Create normalized tables for all three collections: `orders`, `order_items`, `bills`, `bill_items` and `users`. Each item table references its parent header table through the parent ID.
 - **[Design]** Preserve the MongoDB source identifier on each header table for traceability.
-- **[Confirmed]** The order-level `suppliers` list contains the same nine codes as the supplier values on the inspected items, so it is derivable from `order_items`.
+- **[Confirmed]** The order-level `suppliers` list contains the same nine codes as the supplier values on the inspected items, so it can be derived from `order_items`.
 - **[Design]** Do not store the `suppliers` list on `orders`, to avoid redundancy.
-- **[Confirmed]** `users.json` contains scalar attributes such as `clinic_name`, `city`, `state`, `zip_code` and `group_id`, and multi-valued fields: `user_type`, `phone_no`, `phone_nos`, `roleId`, `departmentId` and `subgroup_ids`.
-- **[Design]** Store the scalar user attributes in `users`. Move each multi-valued field into its own child table keyed by the user, so no column holds a list.
+- **[Confirmed]** `users.json` contains scalar attributes such as `clinic_name`, `city`, `state`, `zip_code` and `group_id`, and list fields: `user_type`, `phone_no`, `phone_nos`, `roleId`, `departmentId` and `subgroup_ids`.
+- **[Design]** Store the scalar user attributes in `users`. Move each list field into its own child table keyed by the user, so no column holds a list.
 - **[Unverified]** `phone_no` and `phone_nos` both exist, and whether they overlap is not established. Keep them as separate sources until profiled.
 - **[Design]** Exclude the password field from the migration. Treat email, name and phone values as personal data and review whether the analytical layer needs them.
-- **[Design]** `orders.user_id` is stored as a plain column without an enforced foreign key, until the order-to-user relationship is validated (see 6.4).
+- **[Design]** `orders.user_id` is stored as a plain column without an enforced foreign key until the order-to-user relationship is validated (see 6.4).
 - **[Design]** Defer `cart` and `priceMap` (see section 8).
 
 
@@ -125,16 +123,18 @@ These fields are excluded from the initial analytical model. Raw ingestion or st
 
 | Source field | Decision and reason |
 |---|---|
-| `meta_data` | **[Confirmed]** The inspected order contains a per-supplier object (tax, total, `po_num`, `sub_total`, shipping), and the supplier totals sum to `total_amt`. **[Design]** Exclude from the initial model. Consider an order-by-supplier table if supplier-level reporting is needed. **[Assumption]** The totals match for other orders. |
+| `meta_data` | **[Confirmed]** The inspected order contains a per-supplier object (one entry for each of the nine supplier codes). Across its entries the fields include `tax`, `total`, `po_num`, `discount`, `sub_total`, `shipping_cost`, `shipping_method`, `order_email`, `email_delivery_status` and `email_delivery_event`, and the supplier totals sum to `total_amt`. **[Design]** Exclude from the initial model. Consider an order-by-supplier table if supplier-level reporting is needed. **[Assumption]** The totals match for other orders. |
 | `is_backorder` | **[Confirmed]** Observed on 1 of the 41 inspected order items. **[Unverified]** Completeness across the full dataset is unknown. Excluded pending validation. |
 | `lowest_price` | **[Design]** Exclude pending validation of its business meaning and structure. |
 | `account_code_values` | **[Design]** Exclude pending profiling of its nested structure. |
 | `image_url` | **[Design]** Exclude; product imagery is outside the analytical scope. |
-| `processed_at` and other order timestamps | **[Design]** Exclude initially. Reconsider for processing latency analysis. |
-| Order counts (`web_count`, `email_count`, and similar) | **[Design]** Exclude until their definitions are established. |
+| `queued_at`, `started_processing_at`, `processed_at` | **[Confirmed]** Order lifecycle timestamps present in the inspected order. **[Design]** Exclude initially. Reconsider for processing latency analysis. |
+| `web_count`, `email_count`, `direct_count`, `success_count`, `error_count`, `suppliers_count` | **[Confirmed]** Count fields present in the inspected order. **[Design]** Exclude until their definitions are established. |
+| `success_suppliers`, `error_suppliers` | **[Confirmed]** Supplier lists present in the inspected order. **[Design]** Exclude initially. Reconsider if order outcome by supplier is needed. |
 | `shipping_address` | **[Design]** Exclude initially. Reconsider if delivery geography is required. |
 | `payment_methods` | **[Design]** Exclude pending profiling and reporting needs. |
 | `supplier_order_ids` | **[Design]** Exclude until their link to supplier-level orders is validated. |
+| `order_by`, `_meta` | **[Design]** Exclude initially. Their meaning and relation to the users collection are not established. |
 | Other bill header fields (`po_num`, `inv_num`, `bill_to`, `ship_to`, `approval_info`, `supplier_extra_info`) | **[Confirmed]** Present in the inspected bill. **[Design]** Exclude initially. `supplier_extra_info` contains a supplier name for the bill's supplier and could support a supplier name attribute later. |
 | `cart` | **[Confirmed]** A nested field in the user document, with keys of the form `SUPPLIER:code`. **[Design]** Exclude; user/cart data is outside the current scope. |
 | `priceMap` | **[Confirmed]** A supplier-keyed price structure in the inspected user document. **[Design]** Exclude until its structure and analytical purpose are validated. |
@@ -145,6 +145,4 @@ These fields are excluded from the initial analytical model. Raw ingestion or st
 - **[Confirmed]** The inspected JSON documents are samples, not proof of full production volume or completeness.
 - **[Design]** Preserve MongoDB source identifiers for traceability.
 - **[Design]** Keep order-level and bill-level measures at their header grain. Do not sum them across item-level rows.
-- **[Design]** `item_position` is ETL-generated from the array index and combined with the parent ID.
-- **[Assumption]** This composite identifier is reproducible only while the source-array ordering remains stable.
 - **[Unverified]** Relationships between orders, bills, users, products and suppliers require validation before foreign keys or analytical joins are relied upon.
